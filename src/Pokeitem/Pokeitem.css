@@ -1,0 +1,7 @@
+.container-pokeitem{
+    background-color: #FAD67C;
+    border-radius: 30px 0px 0px 30px;
+    width: 29.25rem;
+    height: 3.875rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -3px -4px 5px rgba(254, 226, 153, 0.3);
+}
