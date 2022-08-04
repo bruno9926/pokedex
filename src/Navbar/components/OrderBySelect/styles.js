@@ -2,7 +2,7 @@ const darkGray = '#393939';
 const lightGray = '#434343';
 const selectedOptionColor = '#1C8FD0';
 
-export default {
+const styles = {
   control: (provided) => ({
     ...provided,
     width: '16rem',
@@ -49,3 +49,5 @@ export default {
     fontSize: '1.125rem'
   })
 }
+
+export default styles;

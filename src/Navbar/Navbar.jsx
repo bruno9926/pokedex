@@ -3,7 +3,7 @@ import React from 'react'
 import SearchInput from './components/SearchInput/SearchInput';
 import OrderBySelect from './components/OrderBySelect/OrderBySelect';
 // styles
-import './Navbar.css';
+import './Navbar.scss';
 
 const Navbar = () => {
   return (

@@ -1,7 +1,9 @@
 const ORDER_BY_NUMBER = 'ORDER_BY_NUMBER';
 const ORDER_ALPHABETICALLY = 'ORDER_ALPHABETICALLY';
 
-export default {
+const options = {
     ORDER_BY_NUMBER,
     ORDER_ALPHABETICALLY,
-}
+};
+
+export default options;
