@@ -1,9 +1,14 @@
 import './App.css';
+import Pokeitem from './Pokeitem/Pokeitem'
 
 function App() {
   return (
     <div className="App">
-      <h1>SUSSSS</h1>
+      <Pokeitem></Pokeitem>
+      <Pokeitem></Pokeitem>
+      <Pokeitem></Pokeitem>
+      <Pokeitem></Pokeitem>
+      <Pokeitem></Pokeitem>
     </div>
   );
 }
