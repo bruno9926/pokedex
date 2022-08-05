@@ -2,7 +2,7 @@ import React from "react";
 import '../Pokeitem.scss';
 
 
-const InfoPoke = ({no, name}) => {
+const InfoPokemon = ({no, name}) => {
     return (
         <div className="info-content">
             <p className="info-poke">No. {no}</p>
@@ -11,4 +11,4 @@ const InfoPoke = ({no, name}) => {
     );
 };
 
-export default InfoPoke;
+export default InfoPokemon;

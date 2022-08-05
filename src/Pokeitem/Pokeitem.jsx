@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Pokeitem.scss';
-import InfoPoke from './components/InfoPoke'
+import InfoPoke from './components/InfoPokemon'
 import img1 from "./MiniPokemon.png";
 import img2 from "./type.png";
 
