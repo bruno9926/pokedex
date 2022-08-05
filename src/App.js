@@ -1,4 +1,6 @@
+import React from 'react';
 import './App.css';
+import Navbar from './Navbar/Navbar';
 import Pokeitem from './Pokeitem/Pokeitem'
 
 function App() {
