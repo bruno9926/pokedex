@@ -6,6 +6,7 @@ import Pokeitem from './Pokeitem/Pokeitem'
 function App() {
   return (
     <div className="App">
+      <Navbar></Navbar>
       <Pokeitem></Pokeitem>
       <Pokeitem></Pokeitem>
       <Pokeitem></Pokeitem>

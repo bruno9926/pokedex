@@ -1,5 +1,5 @@
 import React from "react";
-import '../Pokeitem.scss';
+import './InfoPokemon.scss';
 
 
 const InfoPokemon = ({no, name}) => {

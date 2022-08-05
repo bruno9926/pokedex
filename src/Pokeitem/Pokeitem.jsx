@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import './Pokeitem.scss';
 import InfoPoke from './components/InfoPokemon'
-import img1 from "./MiniPokemon.png";
-import img2 from "./type.png";
+import imgPokemon from "./MiniPokemon.png";
+import imgType from "./type.png";
 
 
 const Pokeitem = () => {
@@ -11,9 +11,9 @@ const Pokeitem = () => {
     <label>
       <input type="radio" name="pokeitem" className="pokeitem" />
         <div className="container-pokeitem">
-            <img src={img1} className="img-poke margin-img"/>
+            <img src={imgPokemon} className="img-poke" alt="Pokemon"/>
             <InfoPoke no="666" name="Tu mamá"></InfoPoke>
-            <img src={img2} className="img-type margin-img"/>
+            <img src={imgType} className="img-type" alt="Pokemon Type"/>
         </div>
     </label>
     );
