@@ -1,12 +1,13 @@
 import React from "react";
 import './Pokeitem.scss';
+import PropTypes from 'prop-types'
 import InfoPoke from './components/InfoPokemon/InfoPokemon'
-import imgPokemon from "./MiniPokemon.png";
-import imgType from "./type.png";
 
 
 const Pokeitem = ({no, name, type, img}) => {
     
+  
+
   return(
     <label>
       <input type="radio" name="pokeitem" className="pokeitem" />
@@ -17,6 +18,21 @@ const Pokeitem = ({no, name, type, img}) => {
         </div>
     </label>
     );
+};
+
+Pokeitem.defaultProps = {
+  no: '000',
+  name: 'Pokemon',
+  type: '/assets/img/type.png',
+  img: '/assets/img/MiniPokemon.png'
+
+};
+
+Pokeitem.propTypes = {
+  no: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.node.isRequired,
+  img: PropTypes.node.isRequired
 };
 
 export default Pokeitem;
