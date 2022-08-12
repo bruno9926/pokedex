@@ -1,8 +1,7 @@
 import React from "react";
 import './Pokeitem.scss';
+import PropTypes from 'prop-types'
 import InfoPoke from './components/InfoPokemon/InfoPokemon'
-import imgPokemon from "./MiniPokemon.png";
-import imgType from "./type.png";
 
 
 const Pokeitem = ({no, name, type, img}) => {
@@ -18,5 +17,12 @@ const Pokeitem = ({no, name, type, img}) => {
     </label>
     );
 };
+
+Pokeitem.propTypes = {
+  no: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.node.isRequired,
+  img: PropTypes.node.isRequired
+}
 
 export default Pokeitem;
