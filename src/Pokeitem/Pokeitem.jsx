@@ -21,7 +21,7 @@ const Pokeitem = ({no, name, type, img}) => {
 };
 
 Pokeitem.defaultProps = {
-  no: '000',
+  no: 0,
   name: 'Pokemon',
   type: '/assets/img/type.png',
   img: '/assets/img/MiniPokemon.png'
@@ -29,7 +29,7 @@ Pokeitem.defaultProps = {
 };
 
 Pokeitem.propTypes = {
-  no: PropTypes.string,
+  no: PropTypes.number,
   name: PropTypes.string,
   type: PropTypes.node.isRequired,
   img: PropTypes.node.isRequired
