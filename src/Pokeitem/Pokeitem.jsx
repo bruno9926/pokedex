@@ -6,6 +6,8 @@ import InfoPoke from './components/InfoPokemon/InfoPokemon'
 
 const Pokeitem = ({no, name, type, img}) => {
     
+  
+
   return(
     <label>
       <input type="radio" name="pokeitem" className="pokeitem" />
@@ -18,11 +20,19 @@ const Pokeitem = ({no, name, type, img}) => {
     );
 };
 
+Pokeitem.defaultProps = {
+  no: '000',
+  name: 'Pokemon',
+  type: '/assets/img/type.png',
+  img: '/assets/img/MiniPokemon.png'
+
+};
+
 Pokeitem.propTypes = {
   no: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.node.isRequired,
   img: PropTypes.node.isRequired
-}
+};
 
 export default Pokeitem;
