@@ -17,6 +17,7 @@ const PokeList = () => {
                         name={pokemon.name}
                         no={pokemon.no}
                         img={pokemon.img}
+                        types={pokemon.types}
                     />
                 ))
             }
