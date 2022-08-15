@@ -1,0 +1,12 @@
+.pokeitem-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  
+    gap: 1rem;
+
+    height: calc(100% - 1rem);
+    overflow: auto;
+  }
+  
