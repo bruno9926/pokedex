@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 const useFetchPokemon = () => {
     const [pokemon, setPokemon] = useState([]);
     const [isFetching, setIsFetching] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const fetchPokemon = async (limit = 5, offset = 0) => {
         try {
+            setLoading(true);
             setIsFetching(true);
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
             const body = await response.json();
@@ -21,6 +23,7 @@ const useFetchPokemon = () => {
                 img: result.sprites.front_default,
                 types: result.types.map(type => type.type.name)
             })))
+            setLoading(false);
         } catch (error) {
             setIsFetching(false);
             console.log(error)
@@ -28,7 +31,9 @@ const useFetchPokemon = () => {
     }
 
     useEffect(() => {
+        
         fetchPokemon(600);
+        
     }, []);
 
     useEffect(() => {
@@ -37,7 +42,7 @@ const useFetchPokemon = () => {
         }
     }, [pokemon]);
 
-    return { pokemon, isFetching, fetchPokemon }
+    return { pokemon, isFetching, fetchPokemon, loading }
 }
 
 export default useFetchPokemon

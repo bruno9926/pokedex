@@ -1,16 +1,20 @@
 import React from 'react'
 import Pokeitem from '../Pokeitem/Pokeitem'
+import Spinner from '../Spinner/Spinner';
 import useFetchPokemon from './useFetchPokemon';
 // styles
 import './PokeList.scss'
 
 const PokeList = () => {
 
-    const { pokemon } = useFetchPokemon();
+    const { pokemon, loading } = useFetchPokemon();
 
     return (
+        <div>
+        {loading && <Spinner/>}
         <div className="pokeitem-container">
-            {
+            
+            {pokemon?.length &&
                 pokemon.map((pokemon, index) => (
                     <Pokeitem
                         key={index}
@@ -20,6 +24,7 @@ const PokeList = () => {
                     />
                 ))
             }
+        </div>
         </div>
     )
 }
