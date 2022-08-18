@@ -37,7 +37,7 @@ const useFetchPokemon = () => {
         }
     }, [pokemon]);
 
-    return { pokemon, isFetching, fetchPokemon }
+    return { pokemon, isFetching, fetchPokemon}
 }
 
 export default useFetchPokemon
