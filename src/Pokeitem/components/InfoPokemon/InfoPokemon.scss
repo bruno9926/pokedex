@@ -1,0 +1,21 @@
+.info-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000000b3;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.info-poke{
+    margin: 0.8rem 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.name-poke{
+    text-overflow: ellipsis; 
+    text-align: left;  
+    overflow:hidden;              
+    white-space:nowrap;
+    width: 12rem;
+}
