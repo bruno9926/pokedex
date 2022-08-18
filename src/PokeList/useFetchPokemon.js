@@ -17,7 +17,7 @@ const useFetchPokemon = () => {
 
             setPokemon(resultsData.map(result => ({
                 name: result.name,
-                no: result.order,
+                no: result.id,
                 img: result.sprites.front_default,
                 types: result.types.map(type => type.type.name)
             })))
@@ -28,7 +28,7 @@ const useFetchPokemon = () => {
     }
 
     useEffect(() => {
-        fetchPokemon(600);
+        fetchPokemon(100);
     }, []);
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const useFetchPokemon = () => {
         }
     }, [pokemon]);
 
-    return { pokemon, isFetching, fetchPokemon }
+    return { pokemon, isFetching, fetchPokemon}
 }
 
 export default useFetchPokemon
