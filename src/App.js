@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar';
-import PokeList from './PokeList/PokeList';
+// pages
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <div className="App bg" >
-      <Navbar></Navbar>
-      <PokeList />
+      <Navbar />
+      <Home />
     </div>
   );
 }
