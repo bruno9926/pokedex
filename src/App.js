@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar';
+import { PokedexLayout } from './PokedexLayout/PokedexLayout';
 // pages
-import PokeList from './PokeList/PokeList';
 import Home from './pages/Home/Home';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <PokedexLayout>
       <div className="App bg" >
         <Navbar></Navbar>
-        <PokeList />
+        <Home />
       </div>
     </PokedexLayout>
   );
