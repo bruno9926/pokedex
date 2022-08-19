@@ -26,6 +26,9 @@ $color-selected: #FF6F6F;
     flex-direction: row;
     justify-content: space-between;
 
+    box-sizing: border-box;
+    margin-left: 10px;
+
     &:hover{
         cursor: pointer;
     }
