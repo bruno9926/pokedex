@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar';
+// pages
 import PokeList from './PokeList/PokeList';
-import { PokedexLayout } from './PokedexLayout/PokedexLayout';
+import Home from './pages/Home/Home';
 
 function App() {
   return (

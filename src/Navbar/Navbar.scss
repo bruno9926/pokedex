@@ -9,5 +9,6 @@ nav.navbar {
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 1.625rem;
-    z-index: 999;
+    position: absolute;
+    z-index: 9999;
 }

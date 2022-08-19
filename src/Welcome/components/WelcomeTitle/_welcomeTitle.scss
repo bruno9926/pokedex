@@ -1,0 +1,53 @@
+.title {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+
+  .pokeballs {
+    display: flex;
+    gap: 0.5rem;
+    img {
+      width: 2.8125rem;
+      animation: shake 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+
+      &:nth-of-type(1) {
+        animation-delay: 2s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 3.3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 5.5s;
+      }
+    }
+  }
+
+  h2.welcome-title {
+    margin: 0;
+    display: inline;
+    font-size: 38px;
+    color: #434343;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(0deg);
+  }
+  44% {
+    transform-origin: bottom center;
+    transform: rotate(15deg);
+  }
+  55% {
+    transform-origin: bottom center;
+    transform: rotate(-15deg);
+  }
+  66% {
+    transform: rotate(0deg);
+  }
+}
