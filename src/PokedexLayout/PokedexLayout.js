@@ -1,9 +1,9 @@
 import React from 'react';
-import './PokedexLayout.css';
+import './PokedexLayout.scss';
 import HomeIcon from '../Icons/home.png';
 import { Light } from './components/Light/Light';
 
-function PokedexLayout() {
+function PokedexLayout(props) {
 
     return (
         <div className='j-pokedexLayout-background'>
@@ -23,7 +23,7 @@ function PokedexLayout() {
             <div className='j-pokedexLayout-right-side'></div>
             <div className='j-pokedexLayout-center-screen'>
                 <div className='j-pokedexLayout-screen'>
-                    
+                    {props.children}
                 </div>
                 <div className='j-pokedexLayout-button-container'>
                     <button className='j-pokedexLayout-button'>BACK</button>

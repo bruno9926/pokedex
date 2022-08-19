@@ -2,13 +2,16 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar';
 import PokeList from './PokeList/PokeList';
+import { PokedexLayout } from './PokedexLayout/PokedexLayout';
 
 function App() {
   return (
-    <div className="App bg" >
-      <Navbar></Navbar>
-      <PokeList />
-    </div>
+    <PokedexLayout>
+      <div className="App bg" >
+        <Navbar></Navbar>
+        <PokeList />
+      </div>
+    </PokedexLayout>
   );
 }
 

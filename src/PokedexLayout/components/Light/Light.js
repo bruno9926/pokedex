@@ -1,5 +1,5 @@
 import React from 'react';
-import './Light.css';
+import './Light.scss';
 
 const Light = () => {
 
