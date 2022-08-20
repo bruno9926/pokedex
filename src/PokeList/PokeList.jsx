@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
 import Spinner from "../Spinner/Spinner";
 import useFetchPokemon from "./useFetchPokemon";
+import { PokemonContext } from "../context/PokemonContext";
 // styles
 import "./PokeList.scss";
 
 const PokeList = () => {
-  const { pokemon, isFetching } = useFetchPokemon();
+  const {state: {isFetching, pokemonList}} = useContext(PokemonContext);
+  useFetchPokemon();
 
   return (
     <div>
       {isFetching && <Spinner />}
       <div className="pokeitem-container">
-        {pokemon?.length &&
-          pokemon.map((pokemon, index) => (
+        {pokemonList?.length &&
+          pokemonList.map((pokemon, index) => (
             <Pokeitem
               key={index}
               name={pokemon.name}

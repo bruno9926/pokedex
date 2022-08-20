@@ -1,28 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import { PokemonContext } from '../context/PokemonContext';
 
 const useFetchPokemon = () => {
-    const [pokemon, setPokemon] = useState([]);
-    const [isFetching, setIsFetching] = useState(false)
+
+    const {state: {isFetching, pokemonList}, updateState} = useContext(PokemonContext);
 
     const fetchPokemon = async (limit = 5, offset = 0) => {
         try {
-            setIsFetching(true);
+            updateState({isFetching: true});
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
             const body = await response.json();
             const pokePromises = body.results.map((result) => fetch(result.url));
 
             const allResults = await Promise.all(pokePromises);
             const resultsData = await Promise.all(allResults.map(result => result.json()))
-            console.log(resultsData);
-
-            setPokemon(resultsData.map(result => ({
+            let pokemonList = resultsData.map(result => ({
                 name: result.name,
                 no: result.id,
                 img: result.sprites.front_default,
                 types: result.types.map(type => type.type.name)
-            })))
+            }));
+
+            updateState({pokemonList})
         } catch (error) {
-            setIsFetching(false);
+            updateState({isFetching: false});
             console.log(error)
         }
     }
@@ -32,12 +33,12 @@ const useFetchPokemon = () => {
     }, []);
 
     useEffect(() => {
-        if (pokemon.length >= 0 && isFetching) {
-            setIsFetching(false);
+        if (pokemonList.length >= 0 && isFetching) {
+            updateState({isFetching: false});
         }
-    }, [pokemon]);
+    }, [pokemonList]);
 
-    return { pokemon, isFetching, fetchPokemon}
+    return {fetchPokemon}
 }
 
 export default useFetchPokemon
