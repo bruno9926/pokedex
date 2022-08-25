@@ -13,10 +13,10 @@ const Home = () => {
     <div className="home-page">
       {isFetching && <Spinner />}
       {pokemonList?.length && (
-        <div>
+        <>
           <Welcome />
           <PokeList />
-        </div>
+        </>
       )}
     </div>
   );
