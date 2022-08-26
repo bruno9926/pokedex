@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import './Pokeitem.scss';
 import PropTypes from 'prop-types'
 import InfoPoke from './components/InfoPokemon/InfoPokemon'
+import { PokemonContext } from "../context/PokemonContext";
 // type images
 import typeImgs from './typeImages.json'
 
 
 const Pokeitem = ({ no, name, types, img }) => {
 
+    const { updateState } = useContext(PokemonContext);
+
+    const selectPokemon = () => {
+        updateState({
+            selectedPokemon: {
+                no: no,
+                name: name,
+                types: types,
+                img: img
+            }
+        })
+    }
+
     return (
-        <label>
+        <label onClick={selectPokemon}>
             <input type="radio" name="pokeitem" className="pokeitem" />
             <div className="container-pokeitem">
                 <div>

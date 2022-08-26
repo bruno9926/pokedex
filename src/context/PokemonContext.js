@@ -1,11 +1,11 @@
 import React, { createContext, useState } from "react";
 
 const PokemonContext = createContext();
-const hola = "d";
 
 const initialState = {
     isFetching: false,
-    pokemonList: []
+    pokemonList: [],
+    selectedPokemon: {}
 };
 
 const AppProvider = ({children}) => {
