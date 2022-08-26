@@ -3,6 +3,7 @@ $box-shadow-gray: #4c4c4c;
 $side-background-color: #282625;
 
 .j-pokedexLayout {
+    z-index: -1;
 
     &-background {
         background-color: #E54A28;
@@ -81,8 +82,14 @@ $side-background-color: #282625;
         width: 66%;
         padding-bottom: 42%;
         background-color: #393735;
-        border-radius: 10px;
+        border-radius: 1.5em;
         margin-left: 5vw;
+
+        font-size: 1vw;
+
+        @media screen and (max-width: 773px) {
+            width: 80%;
+        }
     }
 
     &-screen {
