@@ -3,7 +3,6 @@
 .j-pokeview {
 
     &-welcome {
-        @include horizontal-bar-left;
+        @include horizontal-bar-right;
     }
-
 }

@@ -1,20 +1,47 @@
-@mixin horizontal-bar-left {
-    width: 97%;
-    height: 33%;
-    border-radius: 20em 0 0 20em;
+$radius: 15.9063em;
+
+@mixin bubble {
+    width: 35em;
+    height: 20em;
+
+    box-sizing: border-box;
+    text-align: start;
+
+    position: absolute;
+    top: 10em;
+    z-index: 0;
+}
+
+@mixin horizontal-bar-right {
+
+    @include bubble();
+    width: 60em;
+    border-radius: $radius 0 0 $radius;
 
     background: linear-gradient(
-    -90deg,
+    90deg,
     #e3e3e3 3.01%,
     rgba(227, 227, 227, 0.3) 90%
     );
 
-    position: absolute;
-    top: 15%;
     right: 0;
-    z-index: 1;
 
-    box-sizing: border-box;
-    padding: 99px 3rem;
-    text-align: start;
+}
+
+@mixin horizontal-bar-left {
+    
+    @include bubble();
+
+    border-radius: 0 $radius $radius 0;
+
+    background: linear-gradient(
+        -90deg,
+        #e3e3e3 3.01%,
+        rgba(227, 227, 227, 0.3) 90%
+    );
+
+    left: 0;
+
+    padding: 3.5em 3em;
+
 }
