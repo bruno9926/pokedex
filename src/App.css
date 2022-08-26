@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   font-family: 'Advent Pro', sans-serif;
-  height: 100vh;
+  height: 100%;
 }
 
 .bg {
@@ -18,6 +18,6 @@
   width: 100%;
   height: 100%;
   opacity: .25;
-  z-index: -1;
+  z-index: 0;
 }
 

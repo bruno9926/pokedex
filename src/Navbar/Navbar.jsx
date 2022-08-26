@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
         <SearchInput />
-        <OrderBySelect/>
+        <div className="select-container">
+          <OrderBySelect/>
+        </div>
     </nav>
   )
 }

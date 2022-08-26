@@ -1,8 +1,8 @@
-$radius: 254.5px;
+$radius: 15.9063em;
 
 div.welcome {
-  width: 46.875rem;
-  height: 31.8125rem;
+  width: 35em;
+  height: 20em;
   border-radius: 0 $radius $radius 0;
 
   background: linear-gradient(
@@ -12,19 +12,19 @@ div.welcome {
   );
 
   position: absolute;
-  top: 10rem;
+  top: 10em;
   left: 0;
-  z-index: -1;
+  z-index: 0;
 
   box-sizing: border-box;
-  padding: 99px 3rem;
+  padding: 3.5em 3em;
   text-align: start;
 
   @import './components/WelcomeTitle/welcomeTitle';
 
   p {
     color: #646464;
-    font-size: 1.3rem;
+    font-size: 1em;
     font-weight: 500;
   }
 }
