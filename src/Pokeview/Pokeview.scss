@@ -1,0 +1,9 @@
+@import '../styles/_GrayBubble.scss';
+
+.j-pokeview {
+
+    &-welcome {
+        @include horizontal-bar-left;
+    }
+
+}
