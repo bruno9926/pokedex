@@ -22,10 +22,15 @@
     &-container > div {
         position: absolute;
         bottom: -7%;
-        right: 28%;
+        left: 8%;
         gap: 0.5vw;
-        width: 25vw;
+        width: 20vw;
         height: 13%;
         display: flex;
+        justify-content: flex-end;
+
+        @media screen and (max-width: 773px) {
+            left: 13%;
+        }
     }
 }

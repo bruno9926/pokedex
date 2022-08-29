@@ -10,11 +10,8 @@ const Pokeview = () => {
             <div className='j-pokeview-container'>
                 <img alt='Selected Pokemon' src={pokemon}></img>
                 <div>
-                    <Type name='Planta'/>
-                    <Type name='Luchador'/>
-                    <Type name='Planta'/>
-                    <Type name='Luchador'/>
-                    <Type name='Luchador'/>
+                    <Type name='Eléctrico' type='electric'/>
+                    <Type name='Fuego' type='fire'/>
                 </div>
             </div>
         </div>
