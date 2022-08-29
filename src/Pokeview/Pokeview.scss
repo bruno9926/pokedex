@@ -5,4 +5,27 @@
     &-welcome {
         @include horizontal-bar-right;
     }
+
+    &-container > img {
+        width: 35%;
+        position: absolute;
+        left: 6%;
+        bottom: 13%;
+
+        @media screen and (max-width: 773px) {
+            width: 30%;
+            left: 10%;
+        }
+
+    }
+
+    &-container > div {
+        position: absolute;
+        bottom: -7%;
+        right: 28%;
+        gap: 0.5vw;
+        width: 25vw;
+        height: 13%;
+        display: flex;
+    }
 }
