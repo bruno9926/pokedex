@@ -1,9 +1,9 @@
 import React from 'react';
 import './Type.scss';
 
-const Type = ({name, type}) => {
+const Type = ({type}) => {
   return (
-    <div className={(`j-type-${type}`)}>{name}</div>
+    <div className={`j-type-${type}`}>{type}</div>
   )
 }
 

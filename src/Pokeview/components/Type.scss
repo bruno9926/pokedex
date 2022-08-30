@@ -1,10 +1,10 @@
 @mixin type-content {
-    height: 60%;
+    height: 1.4em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0.5em;
-    font-size: 1.1vw;
+    font-size: 1.1em;
     color: white;
     font-weight: 700;
     padding: 0 7% 0 7%;
@@ -15,108 +15,108 @@
     &-normal {
         @include type-content();
         background-color: #a7aab1;
-        box-shadow: 0px 4px 0 #96999E;
+        box-shadow: 0px 0.35em 0 #96999E;
     }
 
     &-fighting {
         @include type-content();
         background-color: #f52640;
-        box-shadow: 0px 4px 0 #D62339;
+        box-shadow: 0px 0.35em 0 #D62339;
     }
 
     &-flying {
         @include type-content();
         background-color: #a6c1ed;
-        box-shadow: 0px 4px 0 #98B1DA;
+        box-shadow: 0px 0.35em 0 #98B1DA;
     }
 
     &-poison {
         @include type-content();
         background-color: #b85cc4;
-        box-shadow: 0px 4px 0 #A94FB5;
+        box-shadow: 0px 0.35em 0 #A94FB5;
     }
 
     &-ground {
         @include type-content();
         background-color: #f2863e;
-        box-shadow: 0px 4px 0 #E27D3A;
+        box-shadow: 0px 0.35em 0 #E27D3A;
     }
 
     &-rock {
         @include type-content();
         background-color: #e6d691;
-        box-shadow: 0px 4px 0 #98B1DA;
+        box-shadow: 0px 0.35em 0 #D7C784;
     }
 
     &-bug {
         @include type-content();
         background-color: #b1e31f;
-        box-shadow: 0px 4px 0 #A3D11C;
+        box-shadow: 0px 0.35em 0 #A3D11C;
     }
 
     &-ghost{
         @include type-content();
         background-color: #5f68cc;
-        box-shadow: 0px 4px 0 #5B62B7;
+        box-shadow: 0px 0.35em 0 #5B62B7;
     }
 
     &-steel {
         @include type-content();
         background-color: #44a7ba;
-        box-shadow: 0px 4px 0 #4893A1;
+        box-shadow: 0px 0.35em 0 #4893A1;
     }
 
     &-fire {
         @include type-content();
         background-color: #feb23c;
-        box-shadow: 0px 4px 0 #DC9C39;
+        box-shadow: 0px 0.35em 0 #DC9C39;
     }
 
     &-water {
         @include type-content();
         background-color: #44abed;
-        box-shadow: 0px 4px 0 #4292C6;
+        box-shadow: 0px 0.35em 0 #4292C6;
     }
 
     &-grass {
         @include type-content();
         background-color: #32DD81;
-        box-shadow: 0px 4px 0 #32C576;
+        box-shadow: 0px 0.35em 0 #32C576;
     }
 
     &-electric {
         @include type-content();
         background-color: #ffeb25;
-        box-shadow: 0px 4px 0 #E7D636;
+        box-shadow: 0px 0.35em 0 #E7D636;
     }
 
     &-psychic {
         @include type-content();
         background-color: #ff7575;
-        box-shadow: 0px 4px 0 #D86767;
+        box-shadow: 0px 0.35em 0 #D86767;
     }
 
     &-ice {
         @include type-content();
         background-color: #7be6d9;
-        box-shadow: 0px 4px 0 #72CEC3;
+        box-shadow: 0px 0.35em 0 #72CEC3;
     }
 
     &-dragon {
         @include type-content();
         background-color: #1071d9;
-        box-shadow: 0px 4px 0 #1764B6;
+        box-shadow: 0px 0.35em 0 #1764B6;
     }
 
     &-dark {
         @include type-content();
         background-color: #58596b;
-        box-shadow: 0px 4px 0 #494A59;
+        box-shadow: 0px 0.35em 0 #494A59;
     }
 
     &-fairy {
         @include type-content();
         background-color: #e7a7d3;
-        box-shadow: 0px 4px 0 #D989C0;
+        box-shadow: 0px 0.35em 0 #D989C0;
     }
 }

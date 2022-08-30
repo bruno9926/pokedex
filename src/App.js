@@ -5,7 +5,6 @@ import Navbar from './Navbar/Navbar';
 import { PokedexLayout } from './PokedexLayout/PokedexLayout';
 // pages
 import Home from './pages/Home/Home';
-import { Pokeview } from './Pokeview/Pokeview';
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <div className="App bg" >
           <Navbar></Navbar>
           <Home />
-          <Pokeview></Pokeview>
         </div>
       </PokedexLayout>
     </AppProvider>
