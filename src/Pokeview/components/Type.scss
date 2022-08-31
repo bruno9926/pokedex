@@ -8,6 +8,7 @@
     color: white;
     font-weight: 700;
     padding: 0 7% 0 7%;
+    text-shadow: -1px 0 #848484, 0 1px #848484, 1px 0 #848484, 0 -1px #848484;
 }
 
 .j-type {
@@ -77,7 +78,7 @@
         background-color: #44abed;
         box-shadow: 0px 0.35em 0 #4292C6;
     }
-
+    
     &-grass {
         @include type-content();
         background-color: #32DD81;
@@ -88,6 +89,7 @@
         @include type-content();
         background-color: #ffeb25;
         box-shadow: 0px 0.35em 0 #E7D636;
+        
     }
 
     &-psychic {
