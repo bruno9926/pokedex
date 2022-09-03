@@ -32,7 +32,7 @@ const Pokeitem = React.forwardRef((props, ref) => {
             </div>
         </label>
     );
-})
+});
 
 Pokeitem.defaultProps = {
     no: 0,
