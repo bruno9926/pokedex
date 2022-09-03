@@ -11,13 +11,14 @@ const Home = () => {
   useFetchPokemon();
   return (
     <div className="home-page">
-      {isFetching && <Spinner />}
-      {pokemonList?.length && (
+      {isFetching && !pokemonList.length ? <Spinner /> : 
+      pokemonList?.length && (
         <>
           <Welcome />
           <PokeList />
         </>
-      )}
+      )} 
+      
     </div>
   );
 };
