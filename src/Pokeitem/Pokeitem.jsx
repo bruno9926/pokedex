@@ -13,12 +13,7 @@ const Pokeitem = React.forwardRef((props, ref) => {
 
     const selectPokemon = () => {
         updateState({
-            selectedPokemon: {
-                no: no,
-                name: name,
-                types: types,
-                img: img
-            }
+            selectedPokemonIndex: no
         })
     }
 

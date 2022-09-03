@@ -5,7 +5,7 @@ const PokemonContext = createContext();
 const initialState = {
     isFetching: false,
     pokemonMap: {},
-    selectedPokemon: {}
+    selectedPokemonIndex: null
 };
 
 const AppProvider = ({children}) => {
