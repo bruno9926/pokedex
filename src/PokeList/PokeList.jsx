@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Pokeitem from "../Pokeitem/Pokeitem";
 import useFetchPokemon from "./useFetchPokemon";
 import { PokemonContext } from "../context/PokemonContext";
+import Spinner from "../Spinner/Spinner";
 // styles
 import "./PokeList.scss";
 
