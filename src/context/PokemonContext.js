@@ -4,7 +4,7 @@ const PokemonContext = createContext();
 
 const initialState = {
     isFetching: false,
-    pokemonList: [],
+    pokemonMap: {},
     selectedPokemon: {}
 };
 

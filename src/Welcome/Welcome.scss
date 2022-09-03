@@ -1,30 +1,14 @@
-$radius: 254.5px;
+@import '../styles/GrayBubble';
 
 div.welcome {
-  width: 46.875rem;
-  height: 31.8125rem;
-  border-radius: 0 $radius $radius 0;
-
-  background: linear-gradient(
-    -90deg,
-    #e3e3e3 3.01%,
-    rgba(227, 227, 227, 0.3) 90%
-  );
-
-  position: absolute;
-  top: 10rem;
-  left: 0;
-  z-index: -1;
-
-  box-sizing: border-box;
-  padding: 99px 3rem;
-  text-align: start;
+  
+  @include horizontal-bar-left;
 
   @import './components/WelcomeTitle/welcomeTitle';
 
   p {
     color: #646464;
-    font-size: 1.3rem;
+    font-size: 1em;
     font-weight: 500;
   }
 }
