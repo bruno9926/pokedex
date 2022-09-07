@@ -4,7 +4,7 @@ import PokeList from "../../PokeList/PokeList";
 import Welcome from "../../Welcome/Welcome";
 import Spinner from "../../Spinner/Spinner";
 import { PokemonContext } from "../../context/PokemonContext";
-import Pokeview from "../../Pokeview/Pokeview";
+import { Pokeview } from '../../Pokeview/Pokeview';
 
 const Home = () => {
   const {
