@@ -9,18 +9,16 @@ import { Pokeview } from "../../Pokeview/Pokeview";
 
 const Home = () => {
   const {
-    state: { isFetching, pokemonList },
+    state: { isFetching, pokemonMap },
   } = useContext(PokemonContext);
+  const pokemonList = Object.values(pokemonMap);
   useFetchPokemon();
   return (
     <div className="home-page">
-      {isFetching && <Spinner />}
-      {pokemonList?.length && (
-        <div>
+      {isFetching && pokemonList.length == 0 ? <Spinner /> : <div>
           <Welcome />
           <PokeList />
-        </div>
-      )}
+        </div> }
     </div>
   );
 };
