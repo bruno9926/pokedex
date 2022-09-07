@@ -56,7 +56,7 @@ const useFetchPokemon = () => {
     }
 
     useEffect(() => {
-        fetchPokemon(10);
+        fetchPokemon(500);
     }, []);
 
     useEffect(() => {

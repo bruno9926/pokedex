@@ -4,7 +4,6 @@ import PokeList from "../../PokeList/PokeList";
 import Welcome from "../../Welcome/Welcome";
 import Spinner from "../../Spinner/Spinner";
 import { PokemonContext } from "../../context/PokemonContext";
-import { Pokeview } from "../../Pokeview/Pokeview";
 
 const Home = () => {
   const {
@@ -13,9 +12,10 @@ const Home = () => {
   const pokemonList = Object.values(pokemonMap);
   return (
     <div className="home-page">
-      {isFetching && pokemonList.length == 0 ? <Spinner /> : <div>
+      {isFetching && pokemonList.length === 0 ? <div className="cont-spinner"><Spinner /></div> : 
+      <div>
           <Welcome />
-          <PokeList />
+          <PokeList /> 
         </div> }
     </div>
   );
