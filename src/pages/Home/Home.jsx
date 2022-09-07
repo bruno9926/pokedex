@@ -15,7 +15,6 @@ const Home = () => {
     <div className="home-page">
       {isFetching && pokemonList.length === 0 ? <div className="cont-spinner"><Spinner /></div> : 
       <div>
-          <Welcome />
           {
             selectedPokemonIndex ?
             <Pokeview /> : <Welcome />
