@@ -19,7 +19,7 @@ const Pokeview = () => {
         if (index <= Object.keys(pokemonMap).length) {
             setPokemon(pokemonMap[index]);
         }
-    }, [index, pokemonMap])
+    }, [index, pokemonMap]);
 
     return (
         <div className='j-pokeview-welcome'>
