@@ -5,6 +5,7 @@ import Welcome from "../../Welcome/Welcome";
 import Spinner from "../../Spinner/Spinner";
 import { PokemonContext } from "../../context/PokemonContext";
 import { Pokeview } from '../../Pokeview/Pokeview';
+import Navbar from "../../Navbar/Navbar";
 
 const Home = () => {
   const {
@@ -12,7 +13,9 @@ const Home = () => {
   } = useContext(PokemonContext);
   const pokemonList = Object.values(pokemonMap);
   return (
-    <div className="home-page">
+    <>
+      <Navbar />
+      <div className="home-page">
       {isFetching && pokemonList.length === 0 ? <div className="cont-spinner"><Spinner /></div> : 
       <div>
           {
@@ -22,6 +25,7 @@ const Home = () => {
           <PokeList /> 
         </div> }
     </div>
+    </>
   );
 };
 
