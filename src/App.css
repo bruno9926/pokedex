@@ -21,3 +21,26 @@
   z-index: 0;
 }
 
+::-webkit-scrollbar {
+  width: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background: #7B7B7B;
+  border: solid 9px #C4C4C4;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #F3A736;
+  border: 8px solid transparent;
+  border-radius: 30px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fd9800;
+  border: 8px solid transparent;
+  border-radius: 30px;
+  background-clip: content-box;
+}
+
