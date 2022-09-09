@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useContext, useRef, useCallback, useState } from 'react'
 import { PokemonContext } from '../context/PokemonContext';
 
