@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
           <div className="App bg" >
             <Router>
               <Routes>
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Navigate to='/home'/>}/>
+                <Route path="*" element={<Navigate to='/home'/>}/>
+                <Route path="home" element={<Home />} />
               </Routes>
             </Router>
           </div>
