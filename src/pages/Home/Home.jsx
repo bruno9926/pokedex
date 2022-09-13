@@ -16,15 +16,15 @@ const Home = () => {
     <>
       <Navbar />
       <div className="home-page">
-      {isFetching && pokemonList.length === 0 ? <div className="cont-spinner"><Spinner /></div> : 
-      <div>
+        {isFetching && pokemonList.length === 0 ? <div className="cont-spinner"><Spinner /></div> : 
+        <div>
           {
             selectedPokemonIndex ?
             <Pokeview /> : <Welcome />
           }
           <PokeList /> 
         </div> }
-    </div>
+      </div>
     </>
   );
 };
