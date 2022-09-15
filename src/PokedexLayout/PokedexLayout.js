@@ -2,8 +2,21 @@ import React from 'react';
 import './PokedexLayout.scss';
 import HomeIcon from '../Icons/home.png';
 import { Light } from './components/Light/Light';
+import { usePokemon } from '../hooks/usePokemon';
 
 function PokedexLayout(props) {
+
+    const {pokemon} = usePokemon();
+
+    const goBack = () => {
+        window.history.back();
+    }
+
+    const goStats = () => {
+        if(pokemon) {
+            window.location.href = "/stats";
+        }
+    }
 
     return (
         <div className='j-pokedexLayout-background'>
@@ -26,8 +39,11 @@ function PokedexLayout(props) {
                     {props.children}
                 </div>
                 <div className='j-pokedexLayout-button-container'>
-                    <button className='j-pokedexLayout-button'>BACK</button>
-                    <button className='j-pokedexLayout-button'>SELECT</button>
+                    <button className='j-pokedexLayout-button'
+                        onClick={goBack}>BACK</button>
+                    <button className='j-pokedexLayout-button'
+                        onClick={goStats}>
+                    SELECT</button>
                 </div>
             </div>
         </div>

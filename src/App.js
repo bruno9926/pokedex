@@ -4,6 +4,7 @@ import AppProvider from './context/PokemonContext';
 import { PokedexLayout } from './PokedexLayout/PokedexLayout';
 // pages
 import Home from './pages/Home/Home';
+import PokemonDetails from './pages/PokemonDetails/PokemonDetails';
 
 import {
   BrowserRouter as Router,
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/" element={<Navigate to='/home'/>}/>
                 <Route path="*" element={<Navigate to='/home'/>}/>
                 <Route path="/home" element={<Home />} />
+                <Route path="/stats" element={<PokemonDetails />} />
               </Routes>
             </Router>
           </div>
