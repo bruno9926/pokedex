@@ -8,7 +8,9 @@ export const usePokemon = () => {
         pokemonMap
     } } = useContext(PokemonContext);
     
-    const [pokemon, setPokemon] = useState();
+    const [pokemon, setPokemon] = useState(
+        index <= Object.keys(pokemonMap).length ? pokemonMap[index] : null
+    );
     
     useEffect(() => {
         if (!index || Object.keys(pokemonMap).length === 0) {

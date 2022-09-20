@@ -16,18 +16,18 @@ import {
 function App() {
   return (
     <AppProvider>
+      <Router>
         <PokedexLayout>
           <div className="App bg" >
-            <Router>
               <Routes>
                 <Route path="/" element={<Navigate to='/home'/>}/>
                 <Route path="*" element={<Navigate to='/home'/>}/>
                 <Route path="/home" element={<Home />} />
                 <Route path="/stats" element={<PokemonDetails />} />
               </Routes>
-            </Router>
           </div>
         </PokedexLayout>
+      </Router>
     </AppProvider>
     
   );

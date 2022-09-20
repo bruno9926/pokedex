@@ -3,18 +3,21 @@ import './PokedexLayout.scss';
 import HomeIcon from '../Icons/home.png';
 import { Light } from './components/Light/Light';
 import { usePokemon } from '../hooks/usePokemon';
+import { useNavigate } from "react-router-dom";
+
 
 function PokedexLayout(props) {
 
+    let navigate = useNavigate();
     const {pokemon} = usePokemon();
 
     const goBack = () => {
-        window.history.back();
+        navigate('/home');
     }
 
     const goStats = () => {
         if(pokemon) {
-            window.location.href = "/stats";
+            navigate('/stats');
         }
     }
 

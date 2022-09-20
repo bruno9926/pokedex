@@ -3,14 +3,14 @@ import './Pokeview.scss';
 import Type from './components/Type';
 import { usePokemon } from '../hooks/usePokemon';
 
-const Pokeview = ({selectedPokemon}) => {
+const Pokeview = () => {
 
     const { pokemon } = usePokemon();
 
     return (
         <div className='j-pokeview-welcome'>
             {
-                pokemon || selectedPokemon ?
+                pokemon ?
                 <div className='j-pokeview-container'>
                     <img alt='Selected Pokemon' src={pokemon.img}></img>
                     <div className='j-pokeview-type-container'>
