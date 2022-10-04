@@ -1,25 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React from 'react';
 import './Pokeview.scss';
 import Type from './components/Type';
-import { PokemonContext } from '../context/PokemonContext';
+import { usePokemon } from '../hooks/usePokemon';
 
 const Pokeview = () => {
 
-    const { state: {
-        selectedPokemonIndex: index,
-        pokemonMap
-    } } = useContext(PokemonContext);
-
-    const [pokemon, setPokemon] = useState();
-
-    useEffect(() => {
-        if (!index || Object.keys(pokemonMap).length === 0) {
-            return;
-        }
-        if (index <= Object.keys(pokemonMap).length) {
-            setPokemon(pokemonMap[index]);
-        }
-    }, [index, pokemonMap]);
+    const { pokemon } = usePokemon();
 
     return (
         <div className='j-pokeview-welcome'>

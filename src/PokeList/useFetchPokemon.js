@@ -42,7 +42,8 @@ const useFetchPokemon = () => {
                     name: result.name,
                     no: result.id,
                     img: result.sprites.front_default,
-                    types: result.types.map(type => type.type.name)
+                    types: result.types.map(type => type.type.name),
+                    stats: result.stats.map(stat => ({statName: stat.stat.name, value: stat.base_stat})),
                 }
             });
 
