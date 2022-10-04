@@ -12,7 +12,7 @@ const StatBar = ({name, value, fill}) => {
                 <p className='o-stat-bar-text'>{value}</p>
             </div>
             <div className='o-stat-bar-loader'>
-                <div className='o-stat-bar-fill' style={{width: `${fill}%`}}></div>
+                <div className='o-stat-bar-fill' style={{width: fill > 100 ? '100%' : `${fill}%`}}></div>
             </div>
         </div>
   )

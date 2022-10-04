@@ -21,5 +21,5 @@ export const usePokemon = () => {
         }
     }, [index, pokemonMap]);
 
-    return {pokemon};
+    return {pokemon, setPokemon};
 }

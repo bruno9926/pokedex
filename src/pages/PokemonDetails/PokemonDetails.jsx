@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Pokeview } from '../../Pokeview/Pokeview';
 import StatBar from './components/StatBar';
 import { usePokemon } from '../../hooks/usePokemon';
@@ -7,10 +7,6 @@ import './PokemonDetails.scss';
 const PokemonDetails = () => {
 
     const { pokemon } = usePokemon();
-
-    useEffect(() => {
-        console.log(pokemon);
-    }, [pokemon]);
 
     return (
         <>

@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './PokedexLayout.scss';
 import HomeIcon from '../Icons/home.png';
 import { Light } from './components/Light/Light';
 import { usePokemon } from '../hooks/usePokemon';
 import { useNavigate } from "react-router-dom";
+import { PokemonContext } from '../context/PokemonContext';
 
 
 function PokedexLayout(props) {
 
     let navigate = useNavigate();
-    const {pokemon} = usePokemon();
+    const {pokemon, setPokemon} = usePokemon();
+    const { updateState } = useContext(PokemonContext);
 
     const goBack = () => {
+        setPokemon(null);
+        updateState({
+            selectedPokemonIndex: 0
+        })
         navigate('/home');
     }
 
